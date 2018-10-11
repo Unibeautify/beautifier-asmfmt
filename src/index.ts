@@ -15,7 +15,7 @@ export const beautifier: Beautifier = {
     {
       type: DependencyType.Executable,
       name: "asmfmt",
-      program: "asmfmt", // remove this line if npm
+      program: "asmfmt",
       homepageUrl: "https://github.com/klauspost/asmfmt",
       installationUrl: "https://github.com/klauspost/asmfmt#install",
       bugsUrl: "https://github.com/klauspost/asmfmt/issues",
