@@ -19,7 +19,7 @@ export const beautifier: Beautifier = {
       homepageUrl: "https://github.com/klauspost/asmfmt",
       installationUrl: "https://github.com/klauspost/asmfmt#install",
       bugsUrl: "https://github.com/klauspost/asmfmt/issues",
-      badges: []
+      badges: [],
     },
   ],
   options: {
