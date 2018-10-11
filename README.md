@@ -1,13 +1,13 @@
-# beautifier-{{ beautifierDashedName }}
+# beautifier-asmfmt
 
-[![Build Status](https://travis-ci.com/Unibeautify/beautifier-{{ beautifierDashedName }}.svg?branch=master)](https://travis-ci.com/Unibeautify/beautifier-{{ beautifierDashedName }}) [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
+[![Build Status](https://travis-ci.com/Unibeautify/beautifier-asmfmt.svg?branch=master)](https://travis-ci.com/Unibeautify/beautifier-asmfmt) [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
 
-> [{{ beautifierFancyTitle }}]({{ beautifierHomepageUrl }}) beautifier for [Unibeautify](https://github.com/Unibeautify)
+> [asmfmt](https://github.com/klauspost/asmfmt) beautifier for [Unibeautify](https://github.com/Unibeautify)
 
 ## Installation
 
 ```bash
-npm install --global @unibeautify/beautifier-{{ beautifierDashedName }}
+npm install --global @unibeautify/beautifier-asmfmt
 ```
 
 ## Contributing

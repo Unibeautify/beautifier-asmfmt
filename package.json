@@ -1,7 +1,7 @@
 {
-  "name": "@unibeautify/beautifier-{{ beautifierDashedName }}",
+  "name": "@unibeautify/beautifier-asmfmt",
   "version": "0.0.1",
-  "description": "{{ beautifierFancyTitle }} beautifier for Unibeautify",
+  "description": "asmfmt beautifier for Unibeautify",
   "main": "dist/src/index.js",
   "typings": "dist/src/index.d.ts",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Unibeautify/beautifier-{{ beautifierDashedName }}.git"
+    "url": "git+https://github.com/Unibeautify/beautifier-asmfmt.git"
   },
   "keywords": [
     "eslint",
@@ -25,9 +25,9 @@
   "author": "Glavin Wiechert",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Unibeautify/beautifier-{{ beautifierDashedName }}/issues"
+    "url": "https://github.com/Unibeautify/beautifier-asmfmt/issues"
   },
-  "homepage": "git+https://github.com/Unibeautify/beautifier-{{ beautifierDashedName }}#readme",
+  "homepage": "git+https://github.com/Unibeautify/beautifier-asmfmt#readme",
   "peerDependencies": {
     "unibeautify": ">= 0.12.1"
   },

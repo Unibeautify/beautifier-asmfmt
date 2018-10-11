@@ -9,23 +9,22 @@ import options from "./options";
 
 const { pkg } = readPkgUp.sync({ cwd: __dirname });
 export const beautifier: Beautifier = {
-  name: "{{ beautifierFancyTitle }}",
+  name: "asmfmt",
   package: pkg,
   dependencies: [
     {
-      type: DependencyType.{{ beautifierDependencyType }},
-      name: "{{ beautifierFancyTitle }}",
-      package: "{{ beautifierNpmPackage }}", // remove this line if executable
-      program: "{{ beautifierExeCommand }}", // remove this line if npm
+      type: DependencyType.Executable,
+      name: "asmfmt",
+      program: "asmfmt", // remove this line if npm
       parseVersion: [],
-      homepageUrl: "{{ beautifierHomepageUrl }}",
-      installationUrl: "{{ beautifierInstallUrl }}",
-      bugsUrl: "{{ beautifierBugsUrl }}",
+      homepageUrl: "https://github.com/klauspost/asmfmt",
+      installationUrl: "https://github.com/klauspost/asmfmt#install",
+      bugsUrl: "https://github.com/klauspost/asmfmt/issues",
       badges: []
     },
   ],
   options: {
-    
+
   },
   resolveConfig: () => {
 
