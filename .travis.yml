@@ -1,0 +1,38 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=7660d4ebadcf4448b631f405afe844023a6ce524c864f0243d2f9212f3c2ce29
+language: node_js
+node_js:
+  - "8"
+  - "10"
+os:
+  - linux
+  - osx
+cache:
+  directories:
+  - node_modules
+addons:
+  apt:
+    packages:
+      - golang
+  homebrew:
+    packages:
+      - go
+before_script:
+  - go version
+  - export GOPATH=$HOME/go
+  - export PATH=$PATH:$GOPATH/bin
+  - go get -u github.com/klauspost/asmfmt/cmd/asmfmt
+  - which asmfmt
+  - OS_NAME=$(uname | tr A-Z a-z)
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-${OS_NAME}-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - npm test
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+notifications:
+  email:
+    on_success: never
+    on_failure: change
