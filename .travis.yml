@@ -20,7 +20,7 @@ addons:
       - go
 before_script:
   - go version
-  - export GOPATH=~/.go
+  - export GOPATH=$HOME/go
   - export PATH=$PATH:$GOPATH/bin
   - go get -u github.com/klauspost/asmfmt/cmd/asmfmt
   - which asmfmt
