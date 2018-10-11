@@ -15,6 +15,9 @@ addons:
   apt:
     packages:
       - golang
+  homebrew:
+    packages:
+      - go
 before_script:
   - go version
   - export GOPATH=~/.go
