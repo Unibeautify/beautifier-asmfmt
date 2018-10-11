@@ -1,8 +1,8 @@
 import {
   Beautifier,
-  Language,
   BeautifierBeautifyData,
   DependencyType,
+  ExecutableDependency,
 } from "unibeautify";
 import * as readPkgUp from "read-pkg-up";
 import options from "./options";
@@ -16,7 +16,6 @@ export const beautifier: Beautifier = {
       type: DependencyType.Executable,
       name: "asmfmt",
       program: "asmfmt", // remove this line if npm
-      parseVersion: [],
       homepageUrl: "https://github.com/klauspost/asmfmt",
       installationUrl: "https://github.com/klauspost/asmfmt#install",
       bugsUrl: "https://github.com/klauspost/asmfmt/issues",
@@ -34,9 +33,15 @@ export const beautifier: Beautifier = {
     dependencies,
     beautifierConfig,
   }: BeautifierBeautifyData) {
-    return new Promise<string>((resolve, reject) => {
-
-    });
+    const executable = dependencies.get<ExecutableDependency>("asmfmt");
+    return executable
+      .run({ args: [], stdin: text, options: {} })
+      .then(({ exitCode, stderr, stdout }) => {
+        if (exitCode) {
+          return Promise.reject(stderr);
+        }
+        return Promise.resolve(stdout);
+      });
   },
 };
 export default beautifier;
