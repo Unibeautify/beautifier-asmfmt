@@ -24,10 +24,7 @@ export const beautifier: Beautifier = {
     },
   ],
   options: {
-
-  },
-  resolveConfig: () => {
-
+    Assembly: {},
   },
   beautify({
     text,
