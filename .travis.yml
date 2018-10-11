@@ -11,7 +11,16 @@ os:
 cache:
   directories:
   - node_modules
+addons:
+  apt:
+    packages:
+      - golang
 before_script:
+  - go version
+  - export GOPATH=~/.go
+  - export PATH=$PATH:$GOPATH/bin
+  - go get -u github.com/klauspost/asmfmt/cmd/asmfmt
+  - which asmfmt
   - OS_NAME=$(uname | tr A-Z a-z)
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-${OS_NAME}-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
